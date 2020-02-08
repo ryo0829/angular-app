@@ -1,0 +1,23 @@
+<h1>商品一覧</h1>
+<table>
+    <tr>
+        <th>No</th>  
+        <th>商品</th>
+        <th>値段</th>
+        <th>在庫</th>
+        <th>保存期間</th>
+    </tr>
+    <tr *ngFor="let article of product" (click)="onClickRow(article)"
+        [style.background-color]="rowBackColor(article)">
+        <td>{{article.No}}</td>
+        <td>{{article.Name}}</td>
+        <td [class]="nmclass">\{{article.Price| number}}</td>
+        <td [class]="nmclass">
+            <div *ngIf="article.Stock < 0">Error!</div>
+            <div *ngIf="article.Stock >= 0" >{{article.Stock| number}}個</div>
+        </td>
+        <td>{{article.Date | date: 'mediumDate'}}</td>
+  </tr>
+  </table>
+  <br>
+  <a routerLink="/home">戻る</a>

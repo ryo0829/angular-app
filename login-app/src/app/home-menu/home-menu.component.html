@@ -1,3 +1,12 @@
 <h1>Home!!</h1>
-<p>{{ name }}さん、こんにちは</p>
+<p *ngIf="name != null">{{ name }}さん、こんにちは</p>
+<p *ngIf="name == null">adminさん、こんにちは</p>
+<table>
+    <tr>
+        <td><button (click)="doProductClick()">商品一覧</button></td>
+        <td></td>
+        <td><button (click)="doClientClick()">顧客一覧</button></td>
+    </tr>
+</table>
+<br>
 <a routerLink="/login">ログアウト</a>

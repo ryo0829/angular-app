@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router} from '@angular/router';
 
 @Component({
   selector: 'app-home-menu',
@@ -9,7 +9,7 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 export class HomeMenuComponent implements OnInit {
   name:string;
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     this.activatedRoute.queryParamMap.subscribe((params: ParamMap) => {
@@ -17,6 +17,14 @@ export class HomeMenuComponent implements OnInit {
     });
   }
 
-  //TODO 何を表示するかはまだ未実装 20200205
+  doProductClick(){
+    //商品一覧に遷移
+    this.router.navigate(['product']);
+  }
+
+  doClientClick(){
+    //顧客一覧に遷移
+    this.router.navigate(['client']);
+  }
 
 }
