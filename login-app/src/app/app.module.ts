@@ -3,12 +3,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Router }   from '@angular/router';
 import { FormsModule }   from '@angular/forms';
 import { AppComponent } from './app.component';
-import { LoginMenuComponent } from './login-menu/login-menu.component';
-import { HomeMenuComponent } from './home-menu/home-menu.component';
-import { ProductComponent } from './product/product.component';
-import { ProductService }  from './product/product.service';
-import { ClientComponent } from './client/client.component';
-import { ClientService } from './client/client.service';
+import { LoginMenuComponent } from './component/login-menu.component';
+import { HomeMenuComponent } from './component/home-menu.component';
+import { ProductComponent } from './component/product.component';
+import { ProductService }  from './service/product.service';
+import { ClientComponent } from './component/client.component';
+import { ClientService } from './service/client.service';
 
 @NgModule({
   declarations: [
