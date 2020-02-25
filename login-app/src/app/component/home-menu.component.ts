@@ -3,8 +3,8 @@ import { ActivatedRoute, ParamMap, Router} from '@angular/router';
 
 @Component({
   selector: 'app-home-menu',
-  templateUrl: './home-menu.component.html',
-  styleUrls: ['./home-menu.component.css']
+  templateUrl: '../page/home-menu.component.html',
+  styleUrls: ['../page/home-menu.component.css']
 })
 export class HomeMenuComponent implements OnInit {
   name:string;

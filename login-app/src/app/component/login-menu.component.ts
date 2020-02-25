@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationExtras } from '@angular/router'
-import { Login } from './login';
+import { Login } from '../service/login';
 
 @Component({
   selector: 'app-login-menu',
-  templateUrl: './login-menu.component.html',
-  styleUrls: ['./login-menu.component.css']
+  templateUrl: '../page/login-menu.component.html',
+  styleUrls: ['../page/login-menu.component.css']
 })
 export class LoginMenuComponent {
 
